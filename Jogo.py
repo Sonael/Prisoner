@@ -1,11 +1,7 @@
 import random
 import PySimpleGUI as sg
-from time import sleep
-
 
 sg.theme('DarkGreen3')
-
-
 
 numero = 1
 
@@ -61,10 +57,6 @@ def fill_matrix():
 
 fill_matrix()
 
-# Define o tema da interface gráfica
-
-
-# Cria a lista de botões
 
 
 # Cria o layout da janela
@@ -73,6 +65,7 @@ layout = [[sg.Text('Jogo de Descoberta', font=('Helvetica', 20), justification='
           [sg.Text('Número Atual: 1', font=('Helvetica', 14), justification='center', key='current_number', size=(70,1))],
           [sg.Text('Selecione uma célula para revelar o número:', font=('Helvetica', 14), justification='center', size=(70,1))]]
 
+#Cria a matriz de botões
 def create_buttons():
     buttons = [[sg.Button('', size=(7,2), key=(i,j), pad=(1,1), button_color='grey') for j in range(10)] for i in range(10)]
     for row in buttons:
@@ -80,7 +73,7 @@ def create_buttons():
 
 create_buttons()
 
-#reset button
+#Reseta todos os botões
 def reset_buttons():
     for i in range(10):
         for j in range(10):
